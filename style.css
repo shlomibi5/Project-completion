@@ -1,0 +1,143 @@
+body {
+margin-bottom: 120px;
+	background-image: url(background.jpg);
+	background-attachment: fixed;
+	background-size: 100%;
+	font-family: Tahoma;
+	direction: rtl;
+}
+
+nav {
+	text-align: center;
+	width: 550px;
+	margin: 0 auto;
+	height: 50px;
+	border-bottom: 3px solid #666;
+	-webkit-border-radius: 25px;
+}
+
+li {
+	float: right;
+	display: inline-block;
+	font-weight: bold;
+	padding-left: 20px;
+}
+
+li:hover {
+	color: #000;
+	text-shadow: 2px 2px 7px #000000;
+	-webkit-transition: all .1s ease-in;
+	-moz-transition: all .1s ease-in;
+	-o-transition: all .1s ease-in;
+	-ms-transition: all .1s ease-in;
+	transition: all .1s ease-in;
+}
+
+a{
+	text-decoration: none;
+}
+
+#h1 {
+	font-size: 12px;
+	text-align: center;
+	color: #cccccc;
+}
+.main {
+width: 950px;
+margin: 0 auto;
+
+}
+.main .all-boxes {
+
+	margin-bottom: 40px;
+	width: 100%;
+	float: right;
+}
+
+.main .all-boxes .box {
+	margin-right: 40px;
+	margin-bottom: 20px;
+	width: 260px;
+	height: 220px;
+	float: right;
+	background-color: #ccc;
+	-webkit-border-radius: 25px;
+	border-right: 4px solid #999;
+	box-shadow: 10px 10px 20px #999;
+}
+
+.main .all-boxes .box .img-box {
+	width: 100%;
+	float: right;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.main .all-boxes .box .txt-box {
+	width: 100%;
+	float: right;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.box:hover .info-text {
+	opacity: 0.7;
+	text-align: center;
+	color: blue;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Tahoma;
+	padding: 30px;
+	-webkit-border-radius: 25px;
+	box-shadow: 10px 10px 20px #999;
+}
+
+.info-text {
+	margin: 0 auto;
+	width: 200px;
+	height: 55px;
+	float: none;
+	background: #ffff33;
+	opacity: 0;
+}
+
+footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 30px;
+	background: #CCCCCC;
+	text-align: center;
+	font-weight: bold;
+}
+
+/*form page*/
+
+.hform {
+	width: 100%;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.formpage {
+	
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	background: #ccc;
+	-webkit-border-radius: 25px;
+	box-shadow: 10px 10px 20px #999;
+	margin-top: 80px;
+}
+textarea {
+	width: 300px;
+	height: 70px;
+}
+
+.lang{
+	position: absolute;
+	top:0px;
+	right: 0px;
+}
+
