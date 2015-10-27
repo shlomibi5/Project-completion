@@ -1,10 +1,23 @@
 body {
-margin-bottom: 120px;
+	margin-bottom: 120px;
 	background-image: url(background.jpg);
 	background-attachment: fixed;
 	background-size: 100%;
 	font-family: Tahoma;
 	direction: rtl;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin: 0;
+}
+@media (max-width: 700px) {
+	body {
+		background: none;
+	}
 }
 
 nav {
@@ -14,6 +27,35 @@ nav {
 	height: 50px;
 	border-bottom: 3px solid #666;
 	-webkit-border-radius: 25px;
+}
+@media (max-width: 700px) {
+	nav {
+		height: 550px;
+		width: 100%;
+	}
+}
+
+@media (max-width: 700px) {
+	nav ul li img {
+		height: 550px;
+		max-width: 100px;
+		display: none;
+	}
+}
+@media (max-width: 700px) {
+	nav ul li {
+		height: 20px;
+		width: 100%;
+		border: solid 3px;
+		text-align: center;
+	}
+	li {
+		float: none;
+		display: block;
+	}
+	ul {
+		padding-right: 0;
+	}
 }
 
 li {
@@ -33,7 +75,7 @@ li:hover {
 	transition: all .1s ease-in;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
@@ -43,10 +85,10 @@ a{
 	color: #cccccc;
 }
 .main {
-width: 950px;
-margin: 0 auto;
-
+	width: 950px;
+	margin: 0 auto;
 }
+
 .main .all-boxes {
 
 	margin-bottom: 40px;
@@ -121,7 +163,7 @@ footer {
 }
 
 .formpage {
-	
+
 	width: 500px;
 	height: 300px;
 	margin: 0 auto;
@@ -135,9 +177,9 @@ textarea {
 	height: 70px;
 }
 
-.lang{
+.lang {
 	position: absolute;
-	top:0px;
+	top: 0px;
 	right: 0px;
 }
 
