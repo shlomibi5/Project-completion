@@ -27,6 +27,7 @@ nav {
 	height: 50px;
 	border-bottom: 3px solid #666;
 	-webkit-border-radius: 25px;
+	margin-bottom: 10px;
 }
 @media (max-width: 700px) {
 	nav {
@@ -56,6 +57,24 @@ nav {
 	ul {
 		padding-right: 0;
 	}
+	.main .all-boxes {
+
+	margin-bottom: 40px;
+	width: 100%;
+	float: right;
+}
+
+.main .all-boxes .box{
+	margin-right: 40px;
+	margin-bottom: 20px;
+	width: 260px;
+	height: 220px;
+	float: right;
+	background-color: #ccc;
+	-webkit-border-radius: 25px;
+	border-right: 4px solid #999;
+	box-shadow: 10px 10px 20px #999;
+}
 }
 
 li {
@@ -96,7 +115,7 @@ a {
 	float: right;
 }
 
-.main .all-boxes .box {
+.main .all-boxes .box{
 	margin-right: 40px;
 	margin-bottom: 20px;
 	width: 260px;
@@ -183,3 +202,14 @@ textarea {
 	right: 0px;
 }
 
+#appstyle{
+	background: #ccc;
+	margin-top: 50px;
+	width: 900px;
+	height: 500px;
+	border: 3px solid #999;
+	margin: 0 auto;
+}
+#menuapp{
+	margin: 5px 10px 0 0;
+}
