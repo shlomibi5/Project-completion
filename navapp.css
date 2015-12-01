@@ -1,0 +1,53 @@
+#navpp .ulnav .ulnav {
+	display: none;
+}
+
+#navpp .ulnav li:hover > .ulnav {
+	display: block;
+}
+
+#navpp .ulnav {
+	background: #efefef;
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%);
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	padding: 0 20px;
+	border-radius: 10px;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+
+#navpp .ulnav .ulnav {
+	background: #5f6975;
+	border-radius: 0px;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+	z-index: 8;
+}
+#navpp .ulnav .ulnav li {
+	float: none;
+	border-top: 1px solid #6b727c;
+	border-bottom: 1px solid #575f6a;
+	position: relative;
+}
+#navpp .ulnav .ulnav li a {
+
+	color: #fff;
+}
+#navpp .ulnav .ulnav li a:hover {
+	background: #4b545f;
+}
+#navpp .ulnav li {
+	margin-left: 5px;
+	width: 180px;
+	height: 25px;
+	border: 1px solid;
+	margin-top: 10px;
+}
+#navpp{
+	width: 900px;
+	height: 800px;
+}
