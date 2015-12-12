@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="collagezone" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -9,12 +9,19 @@
 		<title>CollagZone יציאת קולאז' בכל איזור</title>
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" href="../style.css">
+		<link rel="stylesheet" href="../navapp.css">
 		<link rel="stylesheet" href="../button.css" />
+		<link rel="stylesheet" href="../app.css" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
+		<script src="http://html2canvas.hertzen.com/build/html2canvas.js"></script>
+
 	</head>
 
-	<body>
+	<body ng-controller="shlomiController" id="reset">
 
-		<div class="all-site">
+		<div class="all-site" >
 			<header>
 				<div id="logo">
 					<center>
@@ -25,7 +32,7 @@
 					<ul>
 						<li class="li_nav"><img src="../pic\home.png" width="35px" height="35px" /><a class="a_menu" href="index.html">Home</a>
 						</li>
-						<li class="li_nav"><img src="../pic\pro.png" width="35px" height="35px"/><a class="a_menu" href="project.html">Project</a>
+						<li class="li_nav"><img src="../pic\pro.png" width="35px" height="35px"/><a class="a_menu" href="project.html">Create collage</a>
 						</li>
 						<li class="li_nav"><img src="../pic\contact.png" width="35px" height="35px" /><a class="a_menu" href="contact.html">Contact Us</a>
 						</li>
@@ -36,17 +43,89 @@
 				<div class="lang">
 					<ul>
 						<li>
-							<a href="../index.html"><img src="../he.png" />HE</a>
+							<a href="index.html"><img src="../he.png" />HE</a>
 						</li>
 						<li>
 							<a href="eng/index.html"><img src="../en.png" />EN</a>
 						</li>
 					</ul>
 				</div>
+			</header>
+			<div id="app" >
+				<div style="background-image: url(http://127.0.0.1:8020/Project-completion/temp/{{ imageName }}); margin: 0 auto; z-index: 3; position: relative; background-size: 100%; width: 790px; height: 590px">
 
+				</div>
+
+				<div id="tmp1" style="display: block";>
+					<div id="tmp-top"></div>
+					<div id="tmp-center"></div>
+					<div id="tmp-bottom">
+
+					</div>
+				</div>
+			</div>
+			<div id="appstyle" >
+				<div id="navpp">
+					<center >
+						<ul class="ulnav">
+
+							<form>
+								בחר קובץ:
+								<input type="file" id="file1" style="width: 65px;" title="תמונה ראשונה" >
+								<input type="file" id="file2" style="width: 65px;" title="תמונה שנייה" >
+								<input type="file" id="file3" style="width: 65px;" title="תמונה שלישית" >
+							</form>
+
+							<li>
+								<a href="#">Choose template</a>
+								<ul class="ulnav">
+
+									<img ng-click="setImage('1b.png')" id="temp1" src="../temp/1.png" style="width: 80px;" onclick="changeid('1')">
+
+									<img ng-click="setImage('2b.png')" id="temp2" src="../temp/2.png" style="width: 80px;" onclick="changeid('2')">
+
+									<img ng-click="setImage('3b.png')" id="temp3" src="../temp/3.png" style="width: 80px;" onclick="changeid('3')">
+
+									<img ng-click="setImage('4b.png')" id="temp4" src="../temp/4.png" style="width: 80px;" onclick="changeid('4')">
+
+									<img ng-click="setImage('5b.png')" id="temp5" src="../temp/5.png" style="width: 80px;" onclick="changeid('5')">
+
+									<img ng-click="setImage('6b.png')" id="temp6" src="../temp/6.png" style="width: 80px;" onclick="changeid('6')">
+
+									<img ng-click="setImage('7b.png')" id="temp7" src="../temp/7.png" style="width: 80px;" onclick="changeid('7')">
+
+									<img ng-click="setImage('8b.png')" id="temp8" src="../temp/8.png" style="width: 80px;" onclick="changeid('8')">
+
+									<img ng-click="setImage('9b.png')" id="temp9" src="../temp/9.png" style="width: 80px;" onclick="changeid('9')">
+
+									<img ng-click="setImage('10b.png')" id="temp10" src="../temp/10.png" style="width: 80px;" onclick="changeid('10')">
+
+								</ul>
+							</li>
+
+							<li>
+								<a id="btnSave" href="#">Save collage</a>
+							</li>
+						</ul>
+
+						<INPUT id="refresh" Type="button" VALUE="Reset collage" onClick="history.go(0)" style="background:blue; ">
+
+					</center>
+				</div>
+				<br />
+				<br />
+			</div>
+		</div>
+		<div id="img-out">
+			Save Image
+			<div>
+				(Click on the right mouse button and choose Save Image)
+			</div>
+		</div>
 	</body>
 	<footer>
-		All rights reserved © Collage Zone 2015 <span class="likebtn-wrapper" data-theme="github" data-lang="auto" data-identifier="likeButton1"></span>
+		כל הזכויות שמורות ל © Collage Zone 2015
+		<span class="likebtn-wrapper" data-theme="github" data-lang="auto" data-identifier="likeButton1"> </span>
 		<script>
 			(function(d, e, s) {
 				if (d.getElementById("likebtn_wjs"))
@@ -58,6 +137,124 @@
 				a.src = s;
 				m.parentNode.insertBefore(a, m)
 			})(document, "script", "//w.likebtn.com/js/w/widget.js");
+
+			var number;
+			var app = angular.module('collagezone', []);
+			app.controller('shlomiController', function($scope) {
+				$scope.setImage = function(x) {
+					$scope.imageName = x;
+				};
+			});
+
+			//מחליף ID לתמונות
+			function changeid(id) {
+				number = id;
+				var t = document.getElementById("tmp-top");
+				t.id = "tmp" + number + "-top";
+				var c = document.getElementById("tmp-center");
+				c.id = "tmp" + number + "-center";
+				var b = document.getElementById("tmp-bottom");
+				b.id = "tmp" + number + "-bottom";
+				document.getElementById("app").reset();
+			}
+
+
+			function renderImage(file, location) {
+
+				var reader = new FileReader();
+
+				reader.onload = function(event) {
+					the_url = event.target.result
+					$('#tmp' + number + '-' + location).html("<img src='" + the_url + "' />");
+				};
+
+				reader.readAsDataURL(file);
+			}
+
+
+			$("#file1").change(function() {
+				console.log(this.files);
+
+				renderImage(this.files[0], "top");
+			});
+
+			$("#file2").change(function() {
+				console.log(this.files);
+
+				renderImage(this.files[0], "center");
+			});
+
+			$("#file3").change(function() {
+				console.log(this.files);
+
+				renderImage(this.files[0], "bottom");
+			});
+			function outputUpdate(vol) {
+				document.querySelector('#age').value = vol;
+
+			}
+
+			$(function() {
+				$("#btnSave").click(function() {
+					html2canvas($("#app"), {
+						onrendered : function(canvas) {
+							theCanvas = canvas;
+							document.body.appendChild(canvas);
+							theCanvas.setAttribute('id', '1canvas')
+							// Convert and download as image
+							Canvas2Image.saveAsPNG(canvas);
+							$("#img-out").append(canvas);
+							// Clean up
+							//document.body.removeChild(canvas);
+						}
+					});
+				});
+			});
+/**
+ *    Ken Fyrstenberg Nilsen
+ *    Abidas Software
+*/
+var canvas = document.getElementById('1canvas'),
+    ctx = canvas.getContext('2d');
+
+/**
+ * Demonstrates how to download a canvas an image with a single
+ * direct click on a link.
+ */
+function doCanvas() {
+    /* draw something */
+    ctx.fillStyle = '#f90';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#fff';
+    ctx.font = '60px sans-serif';
+    ctx.fillText('Code Project', 10, canvas.height / 2 - 15);
+    ctx.font = '26px sans-serif';
+    ctx.fillText('Click link below to save this as image', 15, canvas.height / 2 + 35);
+}
+
+/**
+ * This is the function that will take care of image extracting and
+ * setting proper filename for the download.
+ * IMPORTANT: Call it from within a onclick event.
+*/
+function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+}
+
+/** 
+ * The event handler for the link's onclick event. We give THIS as a
+ * parameter (=the link element), ID of the canvas and a filename.
+*/
+document.getElementById('btnSave').addEventListener('click', function() {
+    downloadCanvas(this, '1canvas', 'test.png');
+}, false);
+
+/**
+ * Draw something to canvas
+ */
+doCanvas();
 		</script>
 	</footer>
+
 </html>
