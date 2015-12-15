@@ -13,7 +13,7 @@ body {
 	user-select: none;
 	margin: 0;
 }
-@media (max-width: 700px) {
+@meedia (max-width: 700px) {
 	body {
 		background: none;
 	}
@@ -28,21 +28,21 @@ nav {
 	-webkit-border-radius: 25px;
 	margin-bottom: 10px;
 }
-@media (max-width: 700px) {
+@meedia (max-width: 700px) {
 	nav {
 		height: 550px;
 		width: 100%;
 	}
 }
 
-@media (max-width: 700px) {
+@meedia (max-width: 700px) {
 	nav ul li img {
 		height: 550px;
 		max-width: 100px;
 		display: none;
 	}
 }
-@media (max-width: 700px) {
+@meedia (max-width: 700px) {
 	nav ul li {
 		height: 20px;
 		width: 100%;
